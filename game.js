@@ -46,10 +46,10 @@ $(".btn").on("click", function (e) {
             userInput += 1;
             var userChosenColour = e.currentTarget.getAttribute("id");
             userClickedPattern.push(userChosenColour);
-            playSound(userChosenColour);
-            animatePress(userChosenColour);
             if (userClickedPattern[userInput] === gamePattern[userInput]) {
                 console.log("Success");
+                playSound(userChosenColour);
+                animatePress(userChosenColour);
                 if (userInput === level - 1) {
                     userClickedPattern = [];
                     userInput = -1;
